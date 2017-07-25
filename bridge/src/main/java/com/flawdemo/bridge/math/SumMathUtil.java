@@ -1,4 +1,4 @@
-package com.mainpage.util;
+package com.flawdemo.bridge.math;
 
 import android.util.Log;
 
