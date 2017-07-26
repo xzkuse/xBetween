@@ -39,6 +39,7 @@ public class MainActivity extends Activity {
             else if (msg.what == 0)
                 ((TextView) msg.obj).setText("GO!");
             else {
+                ((TextView) msg.obj).setText("start!");
                 ((TextView) msg.obj).setEnabled(true);
                 Intent intent = new Intent(MainActivity.this, LoadingActivity.class);
                 startActivity(intent);
@@ -54,7 +55,7 @@ public class MainActivity extends Activity {
         v.setEnabled(false);
         timer = new Timer();
         timer.schedule(new TimerTask() {
-            int i = 3;
+            int i = 1;
 
             @Override
             public void run() {
