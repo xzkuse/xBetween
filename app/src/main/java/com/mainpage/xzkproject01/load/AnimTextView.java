@@ -84,6 +84,12 @@ public class AnimTextView extends LinearLayout {
         this.onLoadListener = onLoadListener;
     }
 
+    public void setCompleteText(String content) {
+        if (TextUtils.isEmpty(content))
+            return;
+        loadCompelteText.setText(content);
+    }
+
     //开始动画
     public void startLoadAnim() {
         if (loadTextList.size() == 0) {

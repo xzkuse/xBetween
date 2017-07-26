@@ -23,6 +23,8 @@ public class RecylerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     private static final int TYPE_FOOTER = 1;  //顶部FootView
     private AnimTextView animTextViewxt;
     private LoadingAdpViewInf viewInf;
+    private boolean allowLoad = true;//是否允许加载的标记
+    private int listSize = 0;//作为标记
 
     public RecylerViewAdapter(LoadingAdpViewInf viewInf, List<String> list) {
         this.viewInf = viewInf;
@@ -69,11 +71,17 @@ public class RecylerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         } else if (holder instanceof FootViewHolder) {
             FootViewHolder footViewHolder = (FootViewHolder) holder;
             if (!footViewHolder.animTextViewxt.isRunning()) {
-                footViewHolder.animTextViewxt.startLoadAnim();
-                Log.i("tags", "发起加载请求");
-                footViewHolder.animTextViewxt.setOnLoadListener(this);
-                setAnimTextViewxt(footViewHolder.animTextViewxt);//化为代理类,代理对象来处理事情
-                viewInf.getDataFromNet();
+                if (allowLoad) {
+                    Log.i("tags", "发起加载请求");
+                    footViewHolder.animTextViewxt.startLoadAnim();//开启动画
+                    viewInf.getDataFromNet();//发起请求
+                    if (footViewHolder.animTextViewxt.getOnLoadListener() == null) {
+                        footViewHolder.animTextViewxt.setOnLoadListener(this);
+                        setAnimTextViewxt(footViewHolder.animTextViewxt);//化为代理类,代理对象来处理事情
+                    }
+                }else{
+                    footViewHolder.animTextViewxt.setCompleteText("没数据,不加载!");
+                }
             }
         }
     }
@@ -83,14 +91,21 @@ public class RecylerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         return list.size() + 1;
     }
 
-
+    // 加载完成,刷新适配器//表示当前一直会刷新到最后一个
+    //表示每次notify,都是一个加载onBinderHolder的问题,就表示会重复加载动画,,,,
+    //动画的ui变化,会触动recyle的notyfy,如果不更新ui呢?
     @Override
     public void onLoad() {//最后的刷新是强制控制在动画结束之后,.....这才是坑啊
         Log.i("tags", "刷新适配器");
-//        notifyDataSetChanged();
-// 加载完成,刷新适配器//表示当前一直会刷新到最后一个
-        //表示每次notify,都是一个加载onBinderHolder的问题,就表示会重复加载动画,,,,
-        //动画的ui变化,会触动recyle的notyfy,如果不更新ui呢?
+        if (list.size() > 0) {
+            if (listSize != list.size()) {
+//            allowLoad
+                notifyDataSetChanged();
+                listSize = list.size();
+            } else {
+                allowLoad = false;
+            }
+        }
     }
 
     public void recylerAdp() {
