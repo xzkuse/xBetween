@@ -6,4 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.mainpage.xzkproject01.camera.CameraActivity">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="先输入"/>
+
 </android.support.constraint.ConstraintLayout>
