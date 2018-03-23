@@ -64,12 +64,20 @@ public class RecylerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
+        if (onItemClickListener != null)
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.i("tags", "点击item");
+                    onItemClickListener.onItemClick(holder.itemView, position);
+                }
+            });
         if (holder instanceof ViewHolderS) {
             String s = list.get(position);
             ((ViewHolderS) holder).txt.setText(s + "");
         } else if (holder instanceof FootViewHolder) {
-            FootViewHolder footViewHolder = (FootViewHolder) holder;
+            final FootViewHolder footViewHolder = (FootViewHolder) holder;
             if (!footViewHolder.animTextViewxt.isRunning()) {
                 if (allowLoad) {
                     Log.i("tags", "发起加载请求");
@@ -79,11 +87,12 @@ public class RecylerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                         footViewHolder.animTextViewxt.setOnLoadListener(this);
                         setAnimTextViewxt(footViewHolder.animTextViewxt);//化为代理类,代理对象来处理事情
                     }
-                }else{
+                } else {
                     footViewHolder.animTextViewxt.setCompleteText("没数据,不加载!");
                 }
             }
         }
+
     }
 
     @Override
@@ -113,6 +122,16 @@ public class RecylerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             animTextViewxt.recycleAnimView();
             animTextViewxt = null;
         }
+    }
+
+    private OnItemClickListener onItemClickListener;
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(View v, int position);
     }
 
     class ViewHolderS extends RecyclerView.ViewHolder {

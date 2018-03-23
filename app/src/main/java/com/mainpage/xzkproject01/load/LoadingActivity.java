@@ -1,7 +1,9 @@
 package com.mainpage.xzkproject01.load;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,6 +16,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.mainpage.xzkproject01.MainActivity;
 import com.mainpage.xzkproject01.R;
 
 import java.util.ArrayList;
@@ -46,6 +49,20 @@ public class LoadingActivity extends Activity implements SwipeRefreshLayout.OnRe
         initRecyler();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+//        activityManager.getAppTaskThumbnailSize();
+        List<ActivityManager.RunningTaskInfo> tasks = activityManager.getRunningTasks(100);
+        Log.i("tags", "1act的任务数量:" + tasks.size());
+        for (int i = 0; i < tasks.size(); i++) {
+            ActivityManager.RunningTaskInfo taskInfo = tasks.get(i);
+            Log.i("tags", "1act的名称:" + taskInfo.baseActivity.getPackageName() + taskInfo.baseActivity.getClassName());
+        }
+//            activityManager.(mPackages[i]);
+    }
+
     private void initRecyler() {
         list = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
@@ -56,6 +73,21 @@ public class LoadingActivity extends Activity implements SwipeRefreshLayout.OnRe
         contentList.setLayoutManager(linerManager);
         adp = new RecylerViewAdapter(this, list);
         contentList.setAdapter(adp);
+        adp.setOnItemClickListener(new RecylerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+//                Intent intent = new Intent(LoadingActivity.this, MainActivity.class);
+//                startActivity(intent);
+//                ActivityManager am = (ActivityManager)getSystemService (Context.ACTIVITY_SERVICE);
+//                am.restartPackage(getPackageName());
+//                系统会将，该包下的 ，所有进程，服务，全部杀掉，就可以杀干净了，要注意加上
+//                        <uses-permission android:name=\"android.permission.RESTART_PACKAGES\"></uses-permission>
+                Intent intent = new Intent();
+                intent.setClass(LoadingActivity.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  //注意本行的FLAG设置
+                startActivity(intent);
+            }
+        });
     }
 
     private void initSwipLayout() {
