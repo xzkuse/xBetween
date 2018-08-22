@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="DIMEN_100PX">-100px</dimen>
+    <dimen name="DIMEN_100PX_s">100px</dimen>
+
+</resources>
