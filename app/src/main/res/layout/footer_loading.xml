@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/linear_loading_box"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorGray01"
+        android:orientation="horizontal">
+
+        <com.mainpage.xzkproject01.load.AnimTextView
+            android:id="@+id/anim_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            >
+        </com.mainpage.xzkproject01.load.AnimTextView>
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<ProgressBar-->
+                <!--android:id="@+id/progress_loding"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerHorizontal="true" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_toRightOf="@id/progress_loding"-->
+                <!--android:text="加载中..." />-->
+
+        <!--</LinearLayout>-->
+    </RelativeLayout>
+
+</RelativeLayout>

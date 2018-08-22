@@ -6,10 +6,14 @@
     android:layout_height="match_parent"
     tools:context="com.mainpage.xzkproject01.MainActivity">
 
+    <!--和知识互动!-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="start!"
+        android:textSize="30sp"
+        android:enabled="true"
+        android:id="@+id/text1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
