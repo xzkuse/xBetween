@@ -9,5 +9,5 @@ import com.hyphenate.chat.EMClient;
 
 public class Gson {
 
-    EMChatManager
+//    EMChatManager
 }

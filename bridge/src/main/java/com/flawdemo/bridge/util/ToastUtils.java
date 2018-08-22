@@ -10,7 +10,10 @@ import android.widget.Toast;
 import com.flawdemo.bridge.R;
 import com.flawdemo.bridge.log.LogUtils;
 
-public class ToastUtils {
+/**
+ * 设置自定义样式土司
+ */
+public final class ToastUtils {
 
     static Context mContext;
     private static Toast toast;

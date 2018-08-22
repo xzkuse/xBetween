@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android = "http://schemas.android.com/apk/res/android"
              android:layout_width = "match_parent"
-             android:layout_height = "match_parent">
+             android:layout_height = "match_parent"
+             android:background = "@drawable/shape_solid_black_radius_40">
 
     <TextView
-        android:layout_width = "match_parent"
+        android:id = "@+id/txt_toast_msg"
+        style = "@style/txt_normal_size_white"
+        android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
-        android:id="@+id/txt_toast_msg"
-        android:padding="5dp"
-        style="@style/txt_normal_size_black"
-        android:text="aaa"/>
+        android:padding = "10dp"
+        android:text = "aaa"/>
 
 </FrameLayout>

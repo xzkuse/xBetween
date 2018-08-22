@@ -1,6 +1,6 @@
 package com.flawdemo.bridge.log;
 
-import com.flawdemo.bridge.annotation.IntDef;
+import com.flawdemo.bridge.log.annotation.IntDef;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
