@@ -12,19 +12,22 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.mainpage.xzkproject01.AppBase.BaseActivity;
 import com.mainpage.xzkproject01.load.LoadingActivity;
 
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
 
 /**
  * create: 2017/7/25 0025
  * auther: xzk
  * class: MainActivity
- * function: 1.和知识互动
+ * function: 1.首界面
  */
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private Timer timer;
     private ActivityManager activityManager;
@@ -76,6 +79,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(final View v) {
         v.setEnabled(false);
+//        ScheduledExecutorService executorService=new ScheduledThreadPoolExecutor(3);
         timer = new Timer();
         Log.i("tags", "启动命令");
         timer.schedule(new TimerTask() {

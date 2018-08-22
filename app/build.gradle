@@ -30,4 +30,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile files('libs/Rong_IMKit.jar')
     compile files('libs/hyphenatechat_3.3.4.jar')
+
+    implementation 'me.jessyan:autosize:0.7.0'
 }

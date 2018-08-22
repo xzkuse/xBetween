@@ -1,21 +1,16 @@
 package com.mainpage.xzkproject01.load;
 
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-
+import com.mainpage.xzkproject01.AppBase.BaseActivity;
 import com.mainpage.xzkproject01.MainActivity;
 import com.mainpage.xzkproject01.R;
 
@@ -28,7 +23,7 @@ import java.util.List;
  * class: LoadingActivity
  * function: 1.最普通的加载方式
  */
-public class LoadingActivity extends Activity implements SwipeRefreshLayout.OnRefreshListener, LoadingViewInf, LoadingAdpViewInf {
+public class LoadingActivity extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener, LoadingViewInf, LoadingAdpViewInf {
 
     private SwipeRefreshLayout swipeRefresh;
     private RecyclerView contentList;

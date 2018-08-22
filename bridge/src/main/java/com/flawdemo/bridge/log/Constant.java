@@ -27,8 +27,8 @@ public class Constant {
 
     // 默认支持解析库
     public static final Class<? extends Parser>[] DEFAULT_PARSE_CLASS = new Class[]{
-        com.flawdemo.bridge.util.parser.BundleParse.class, com.flawdemo.bridge.util.parser.IntentParse.class, com.flawdemo.bridge.util.parser.CollectionParse.class,
-        com.flawdemo.bridge.util.parser.MapParse.class, com.flawdemo.bridge.util.parser.ThrowableParse.class, com.flawdemo.bridge.util.parser.ReferenceParse.class, com.flawdemo.bridge.util.parser.MessageParse.class
+        com.flawdemo.bridge.log.parser.BundleParse.class, com.flawdemo.bridge.log.parser.IntentParse.class, com.flawdemo.bridge.log.parser.CollectionParse.class,
+        com.flawdemo.bridge.log.parser.MapParse.class, com.flawdemo.bridge.log.parser.ThrowableParse.class, com.flawdemo.bridge.log.parser.ReferenceParse.class, com.flawdemo.bridge.log.parser.MessageParse.class
     };
 
 

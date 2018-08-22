@@ -1,22 +1,20 @@
 package com.mainpage.xzkproject01.load;
 
-import android.content.Context;
-import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.mainpage.xzkproject01.R;
 
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/7/25 0025.
+ * @author xzk
+ * @data 2018/8/22
+ * @remark 动画适配器
  */
-
 public class RecylerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements AnimTextView.OnLoadListener {
     private List<String> list;
     private static final int TYPE_ITEM = 0;  //普通Item View
