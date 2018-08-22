@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name = "txt_large_size_black">
+        <item name = "android:textColor">@color/color_black_dark3</item>
+        <item name = "android:textSize">20sp</item>
+        <item name = "android:gravity">center</item>
+    </style>
+
+    <style name = "txt_normal_size_black">
+        <item name = "android:textColor">@color/color_black_dark3</item>
+        <item name = "android:textSize">15sp</item>
+        <item name = "android:gravity">center</item>
+    </style>
+
+    <style name = "txt_little_size_black">
+        <item name = "android:textColor">@color/color_black_dark3</item>
+        <item name = "android:textSize">13sp</item>
+        <item name = "android:gravity">center</item>
+    </style>
+
+    <style name = "txt_small_size_black">
+        <item name = "android:textColor">@color/color_black_dark3</item>
+        <item name = "android:textSize">10sp</item>
+        <item name = "android:gravity">center</item>
+    </style>
+
+    <style name = "txt_large_size_white">
+        <item name = "android:textColor">@color/color_white</item>
+        <item name = "android:textSize">20sp</item>
+        <item name = "android:gravity">center</item>
+    </style>
+
+    <style name = "txt_normal_size_white">
+        <item name = "android:textColor">@color/color_white</item>
+        <item name = "android:textSize">15sp</item>
+        <item name = "android:gravity">center</item>
+    </style>
+
+    <style name = "txt_little_size_white">
+        <item name = "android:textColor">@color/color_white</item>
+        <item name = "android:textSize">13sp</item>
+        <item name = "android:gravity">center</item>
+    </style>
+
+    <style name = "txt_small_size_white">
+        <item name = "android:textColor">@color/color_white</item>
+        <item name = "android:textSize">10sp</item>
+        <item name = "android:gravity">center</item>
+    </style>
+
+
+    <style name = "txt_large_size_red">
+        <item name = "android:textColor">@color/color_red_brigent</item>
+        <item name = "android:textSize">20sp</item>
+        <item name = "android:gravity">center</item>
+    </style>
+
+    <style name = "txt_normal_size_red">
+        <item name = "android:textColor">@color/color_red_brigent</item>
+        <item name = "android:textSize">15sp</item>
+        <item name = "android:gravity">center</item>
+    </style>
+
+    <style name = "txt_little_size_red">
+        <item name = "android:textColor">@color/color_red_brigent</item>
+        <item name = "android:textSize">13sp</item>
+        <item name = "android:gravity">center</item>
+    </style>
+
+    <style name = "txt_small_size_red">
+        <item name = "android:textColor">@color/color_red_brigent</item>
+        <item name = "android:textSize">10sp</item>
+        <item name = "android:gravity">center</item>
+    </style>
+
+</resources>
