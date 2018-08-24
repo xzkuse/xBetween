@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2018. Beyondsoft Corporation.
+  ~ All Rights Reserved.
+  ~
+  ~ BEYONDSOFT CONFIDENTIALITY
+  ~
+  ~ The information in this file is confidential and privileged from Beyondsoft Corporation,
+  ~ which is intended only for use solely by Beyondsoft Corporation.
+  ~ Disclosure, copying, distribution, or use of the contents of this file by persons other than Beyondsoft Corporation
+  ~ is strictly prohibited and may violate applicable laws.
+  -->
+
+<shape xmlns:android = "http://schemas.android.com/apk/res/android">
+
+    <corners android:radius = "50px"/>
+    <solid android:color = "@color/color_white"/>
+    <stroke
+        android:color = "@color/color_brawn"
+        android:width = "1px"/>
+
+</shape>
