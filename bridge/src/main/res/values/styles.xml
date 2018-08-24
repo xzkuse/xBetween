@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- 字体样式  start -->
     <style name = "txt_large_size_black">
         <item name = "android:textColor">@color/color_black_dark3</item>
         <item name = "android:textSize">20sp</item>
@@ -11,6 +12,17 @@
         <item name = "android:textColor">@color/color_black_dark3</item>
         <item name = "android:textSize">15sp</item>
         <item name = "android:gravity">center</item>
+    </style>
+
+    <style name = "but_normal_black" parent="txt_normal_size_black">
+        <item name = "android:background">@drawable/shape_bg_orange_corners</item>
+        <item name = "android:layout_height">40dp</item>
+        <item name = "android:layout_width">120dp</item>
+    </style>
+
+    <style name = "but_normal_orange" parent="txt_normal_size_black">
+        <item name = "android:textColor">@color/color_brawn2</item>
+        <item name = "android:background">@drawable/shape_stroke1_corner20_solid_white</item>
     </style>
 
     <style name = "txt_little_size_black">
@@ -49,7 +61,6 @@
         <item name = "android:gravity">center</item>
     </style>
 
-
     <style name = "txt_large_size_red">
         <item name = "android:textColor">@color/color_red_brigent</item>
         <item name = "android:textSize">20sp</item>
@@ -73,5 +84,16 @@
         <item name = "android:textSize">10sp</item>
         <item name = "android:gravity">center</item>
     </style>
+    <!-- 字体样式  end -->
+
+    <!-- 弹窗样式  start -->
+    <style name = "time_dialog" parent = "android:style/Theme.Dialog">
+        <item name = "android:windowFrame">@null</item>
+        <item name = "android:windowNoTitle">true</item>
+        <item name = "android:windowIsFloating">true</item>
+        <item name = "android:windowContentOverlay">@null</item>
+        <item name = "android:windowBackground">@color/color_white</item>
+    </style>
+    <!-- 弹窗样式  end -->
 
 </resources>
