@@ -17,7 +17,7 @@ public class StringFormat {
      * @param targetStr
      * @return
      */
-    public static String strFormat(String strWithS, String[] targetStr) {
+    public static String strFormat(String strWithS, String... targetStr) {
         return String.format(strWithS, targetStr);
     }
 
