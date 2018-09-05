@@ -23,14 +23,21 @@
             android:value="1280"/>
 
         <activity android:name=".MainActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".load.LoadingActivity" />
+        <activity android:name=".camera.CameraActivity"></activity>
+        <activity android:name=".view.pathview.PathActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".load.LoadingActivity" />
-        <activity android:name=".camera.CameraActivity"></activity>
     </application>
 
 </manifest>
