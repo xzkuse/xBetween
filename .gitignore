@@ -68,3 +68,7 @@ freeline_project_description.json
 /.idea
 
 /bridge/build
+/litepaltest/build
+litepaltest/src/test/java/com/abc/litepaltest/ExampleUnitTest\.java
+
+litepaltest/src/androidTest/java/com/abc/litepaltest/ExampleInstrumentedTest\.java
