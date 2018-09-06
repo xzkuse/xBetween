@@ -70,3 +70,7 @@ freeline_project_description.json
 /bridge/build
 gradlew
 gradlew.bat
+/litepaltest/build
+litepaltest/src/test/java/com/abc/litepaltest/ExampleUnitTest\.java
+
+litepaltest/src/androidTest/java/com/abc/litepaltest/ExampleInstrumentedTest\.java

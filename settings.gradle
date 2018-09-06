@@ -1,1 +1,1 @@
-include ':app', ':bridge'
+include ':app', ':bridge', ':litepaltest'
