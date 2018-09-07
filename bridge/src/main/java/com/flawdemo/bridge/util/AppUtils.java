@@ -2,6 +2,8 @@ package com.flawdemo.bridge.util;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.support.v4.content.FileProvider;
@@ -15,6 +17,22 @@ import java.io.File;
  */
 public class AppUtils {
 
+    public static String getVersionName(Context context) {
+        return getPackageInfo(context).versionName;
+    }
+
+    private static PackageInfo getPackageInfo(Context context) {
+        PackageInfo pi = null;
+
+        try {
+            PackageManager pm = context.getPackageManager();
+            pi = pm.getPackageInfo(context.getPackageName(), 16384);
+            return pi;
+        } catch (Exception var3) {
+            var3.printStackTrace();
+            return pi;
+        }
+    }
 
     /**
      * 安装 apk 文件
