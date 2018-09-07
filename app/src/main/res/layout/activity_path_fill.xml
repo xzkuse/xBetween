@@ -10,6 +10,7 @@
     <com.mainpage.xzkproject01.view.pathview.PathFillTypeView
         android:id="@+id/path_fill_view"
         android:layout_width = "match_parent"
+        android:background="@color/color_blue"
         android:layout_height = "500px"/>
 
     <Button

@@ -60,6 +60,10 @@ public class PathFillTypeView extends View {
     }
 
     //模式切换
-    private Path.FillType[] modes = {Path.FillType.WINDING, Path.FillType.EVEN_ODD, Path.FillType.INVERSE_EVEN_ODD,
-                                     Path.FillType.INVERSE_WINDING};
+    private Path.FillType[] modes = {
+        Path.FillType.WINDING, //path内全部相交区域进行渲染 path外全部不渲染
+        Path.FillType.EVEN_ODD,  //path内相交区域不渲染  path外全部不渲染
+        Path.FillType.INVERSE_EVEN_ODD,  //path内相交区域渲染  path外全部渲染
+        Path.FillType.INVERSE_WINDING   //path内全部不渲染 path外全部渲染
+    };
 }
