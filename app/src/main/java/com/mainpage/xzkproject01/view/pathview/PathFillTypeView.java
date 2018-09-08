@@ -46,7 +46,7 @@ public class PathFillTypeView extends View {
         Path path = new Path();
         path.setFillType(modes[indexModel]);
         path.addCircle(200, 200, 100, Path.Direction.CCW);
-        path.addCircle(250, 250, 250, Path.Direction.CCW);
+        path.addCircle(250, 250, 100, Path.Direction.CCW);
         canvas.drawPath(path, paint);
     }
 
@@ -59,7 +59,7 @@ public class PathFillTypeView extends View {
         return modes[indexModel].name();
     }
 
-    //模式切换   path外定义为 两个path合并之后最大的上下左右距离  path内定义为两个path形状最终的相交面积
+    //模式切换
     private Path.FillType[] modes = {
         Path.FillType.WINDING, //path内全部相交区域进行渲染 path外全部不渲染
         Path.FillType.EVEN_ODD,  //path内相交区域不渲染  path外全部不渲染
