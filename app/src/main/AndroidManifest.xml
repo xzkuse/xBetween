@@ -38,6 +38,8 @@
         <activity android:name = ".view.pathview.PathFillActivity">
         </activity>
         <activity android:name = ".view.pathview.PathMeasureActivity">
+        </activity>
+        <activity android:name = ".view.svgview.SVGActivity">
             <intent-filter>
                 <action android:name = "android.intent.action.MAIN"/>
 
