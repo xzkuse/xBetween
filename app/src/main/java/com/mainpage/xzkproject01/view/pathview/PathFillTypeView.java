@@ -12,7 +12,7 @@ import com.mainpage.xzkproject01.R;
 /**
  * @author xzk
  * @data 2018/9/7
- * @remark path填充模式示例 9999999999999999999999999
+ * @remark path填充模式示例
  */
 public class PathFillTypeView extends View {
 
