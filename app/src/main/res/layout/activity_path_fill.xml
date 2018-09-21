@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    tools:context = ".view.pathview.PathFill">
+
+    <com.mainpage.xzkproject01.view.pathview.PathFillTypeView
+        android:id="@+id/path_fill_view"
+        android:layout_width = "match_parent"
+        android:background="@color/color_blue"
+        android:layout_height = "500px"/>
+
+    <Button
+        android:id="@+id/but_fill_click"
+        android:text="filltype_start"
+        android:background="@color/color_orange_normal"
+        android:padding="15px"
+        android:textColor="@color/color_blue"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_gravity="bottom"/>
+
+</FrameLayout>

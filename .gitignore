@@ -68,6 +68,8 @@ freeline_project_description.json
 /.idea
 
 /bridge/build
+gradlew
+gradlew.bat
 /litepaltest/build
 litepaltest/src/test/java/com/abc/litepaltest/ExampleUnitTest\.java
 

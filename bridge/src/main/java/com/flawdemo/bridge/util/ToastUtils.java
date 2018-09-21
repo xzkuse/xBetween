@@ -20,6 +20,7 @@ public final class ToastUtils {
 
 //    /**
 //     * @remark 根据错误信息 key 动态 显示 字符
+//            根据项目实际情况设置
 //     */
 //    public static void showErrorMsgToast(String msg) {
 //        try {
@@ -39,11 +40,6 @@ public final class ToastUtils {
 //        }
 //    }
 
-    //            if (toast == null) {
-    //                toast = Toast.makeText(mContext, msgId, Toast.LENGTH_SHORT);
-    //            } else {
-    //                toast.setText(mContext.getString(msgId));
-    //            }
     /**
      * @author John.Gu
      * @email guqinghong@beyondsoft.com

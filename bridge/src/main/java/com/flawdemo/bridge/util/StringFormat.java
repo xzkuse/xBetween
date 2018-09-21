@@ -1,7 +1,13 @@
 package com.flawdemo.bridge.util;
 
+import android.os.Build;
+import android.text.TextUtils;
+
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author xzk
@@ -17,7 +23,7 @@ public class StringFormat {
      * @param targetStr
      * @return
      */
-    public static String strFormat(String strWithS, String[] targetStr) {
+    public static String strFormat(String strWithS, String... targetStr) {
         return String.format(strWithS, targetStr);
     }
 
@@ -69,5 +75,34 @@ public class StringFormat {
             formatString = s.replaceAll(",", "");
         }
         return formatString;
+    }
+
+
+    /**
+     * 验证金额格式  非0开头，小数点后两位，
+     * @param money  金额
+     * @return
+     */
+    public static boolean isMoney(String money){
+        if(TextUtils.isEmpty(money)){
+            return false;
+        }
+        Pattern pattern= Pattern.compile("^(([1-9]{1}\\d*)|([0]{1}))(\\.(\\d){0,2})?$");
+        Matcher match=pattern.matcher(money);
+        if(!match.matches()){
+            return true;
+        }else{
+            return false;
+        }
+        //下面这种写法无效
+        //return !money.matches("^(([1-9]{1}\\\\d*)|([0]{1}))(\\\\.(\\\\d){0,2})?$");
+    }
+
+    public static  void  getFormat(){
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.N){
+            Random random = new Random();
+            random.ints().limit(10).forEach(System.out::println);
+//            Random random1= Random::new;//只有接口能这么干
+        }
     }
 }

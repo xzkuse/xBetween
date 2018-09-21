@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">xBetween</string>
+    <string name = "app_name">xBetween</string>
     <string name = "str_calendar_view">日历控件</string>
 </resources>
