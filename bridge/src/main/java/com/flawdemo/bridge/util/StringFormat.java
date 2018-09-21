@@ -1,9 +1,11 @@
 package com.flawdemo.bridge.util;
 
+import android.os.Build;
 import android.text.TextUtils;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -94,5 +96,13 @@ public class StringFormat {
         }
         //下面这种写法无效
         //return !money.matches("^(([1-9]{1}\\\\d*)|([0]{1}))(\\\\.(\\\\d){0,2})?$");
+    }
+
+    public static  void  getFormat(){
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.N){
+            Random random = new Random();
+            random.ints().limit(10).forEach(System.out::println);
+//            Random random1= Random::new;//只有接口能这么干
+        }
     }
 }
