@@ -74,3 +74,5 @@ gradlew.bat
 litepaltest/src/test/java/com/abc/litepaltest/ExampleUnitTest\.java
 
 litepaltest/src/androidTest/java/com/abc/litepaltest/ExampleInstrumentedTest\.java
+
+android_checklist/android整体checklist\.xlsx
