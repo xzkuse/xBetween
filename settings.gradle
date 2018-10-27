@@ -1,1 +1,1 @@
-include ':app', ':bridge', ':litepaltest'
+include ':app', ':bridge', ':litepaltest', ':baselibary'
