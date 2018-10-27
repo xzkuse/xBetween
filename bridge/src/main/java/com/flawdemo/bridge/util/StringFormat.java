@@ -16,16 +16,16 @@ import java.util.regex.Pattern;
  */
 public class StringFormat {
 
-    /**
-     * 将带有 %s 的字符串 插入目标字符
-     *
-     * @param strWithS
-     * @param targetStr
-     * @return
-     */
-    public static String strFormat(String strWithS, String... targetStr) {
-        return String.format(strWithS, targetStr);
-    }
+//    /**
+//     * 将带有 %s 的字符串 插入目标字符
+//     *
+//     * @param strWithS
+//     * @param targetStr
+//     * @return
+//     */
+//    public static String strFormat(String strWithS, String... targetStr) {
+//        return String.format(strWithS, targetStr);
+//    }
 
     /**
      * 给价格后面默认增加  .00

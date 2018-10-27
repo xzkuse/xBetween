@@ -7,6 +7,7 @@
     <uses-permission android:name = "android.permission.GET_TASKS"/>
     <uses-permission android:name = "android.permission.KILL_BACKGROUND_PROCESSES"/>
     <uses-permission android:name = "android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name = "android.permission.INTERNET" />
 
     <application
         android:allowBackup = "true"
@@ -40,11 +41,19 @@
         <activity android:name = ".view.pathview.PathMeasureActivity">
         </activity>
         <activity android:name = ".view.svgview.SVGActivity">
-            <intent-filter>
-                <action android:name = "android.intent.action.MAIN"/>
+            <!--<intent-filter>-->
+                <!--<action android:name = "android.intent.action.MAIN"/>-->
 
-                <category android:name = "android.intent.category.LAUNCHER"/>
-            </intent-filter>
+                <!--<category android:name = "android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name = ".view.WebviewActivity">
+
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
         </activity>
     </application>
 
