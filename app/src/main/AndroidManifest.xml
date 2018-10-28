@@ -32,10 +32,6 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name = ".load.LoadingActivity"/>
-        <activity android:name = ".camera.CameraActivity"/>
-        <activity android:name = ".view.pathview.PathActivity">
-        </activity>
         <activity android:name = ".view.pathview.PathFillActivity">
         </activity>
         <activity android:name = ".view.pathview.PathMeasureActivity">
@@ -53,14 +49,11 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name = ".view.WebviewActivity">
+        <activity android:name = ".view.WebviewActivity"/>
         <activity android:name=".load.LoadingActivity" />
         <activity android:name=".camera.CameraActivity" />
         <activity android:name=".view.pathview.PathActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-             <intent-filter>
              <action android:name="android.intent.action.MAIN" />
 
              <category android:name="android.intent.category.LAUNCHER" />
