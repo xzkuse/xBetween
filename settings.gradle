@@ -1,1 +1,1 @@
-include ':app', ':bridge', ':litepaltest', ':baselibary'
+include ':app', ':bridge', ':litepaltest', ':baselibary', ':mytaobaolibrary'

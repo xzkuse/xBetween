@@ -76,3 +76,9 @@ litepaltest/src/test/java/com/abc/litepaltest/ExampleUnitTest\.java
 litepaltest/src/androidTest/java/com/abc/litepaltest/ExampleInstrumentedTest\.java
 
 android_checklist/android整体checklist\.xlsx
+
+mytaobaolibrary/src/test/java/com/bridge/mytaobaolibrary/ExampleUnitTest\.java
+
+mytaobaolibrary/src/androidTest/java/com/bridge/mytaobaolibrary/ExampleInstrumentedTest\.java
+
+mytaobaolibrary/proguard-rules\.pro

@@ -92,7 +92,7 @@ public class WaveView extends View{
         canvas.translate(0,60);
         {
             Path path=new Path();
-            path.setFillType(Path.FillType);
+            path.setFillType(Path.FillType.EVEN_ODD);
         }
     }
 
