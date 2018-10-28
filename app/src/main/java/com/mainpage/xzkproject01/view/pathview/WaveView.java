@@ -89,6 +89,11 @@ public class WaveView extends View{
 
             canvas.drawPath(path,paintA);
         }
+        canvas.translate(0,60);
+        {
+            Path path=new Path();
+            path.setFillType(Path.FillType);
+        }
     }
 
     private void initView(){
