@@ -10,7 +10,7 @@
         android:supportsRtl="true">
         <!-- 7.0以上安装应用时，获取文件临时权限配置 -->
         <provider
-            android:authorities = "com.beyondsoft.rdc.cloud.fnb.FileProvider"
+            android:authorities = "com.mainpage.xzkproject01.FileProvider"
             android:exported = "false"
             android:grantUriPermissions = "true"
             android:name = "android.support.v4.content.FileProvider">
