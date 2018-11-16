@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:fresco = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    tools:context = ".splash.SplashActivity">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/dra_view"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:placeholderImage="@mipmap/icon_splash"
+        fresco:placeholderImageScaleType="focusCrop"
+        fresco:progressBarImage="@mipmap/icon_loading"
+        fresco:progressBarImageScaleType="focusCrop"
+        fresco:progressBarAutoRotateInterval="5000"
+        fresco:failureImage="@mipmap/icon_splash_fail"
+        fresco:failureImageScaleType="focusCrop"
+        fresco:retryImageScaleType="focusCrop"
+        fresco:fadeDuration="5000"
+        />
+
+    <Button
+        android:id="@+id/but_enter_in"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text="@string/str_enter_in"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="120dp"
+        />
+
+</FrameLayout>

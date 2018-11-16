@@ -39,4 +39,7 @@ dependencies {
     implementation files('libs/hyphenatechat_3.3.4.jar')
     implementation 'me.jessyan:autosize:0.7.0'
     implementation project(':bridge')
+
+    //图片加载库 fresco
+    implementation 'com.facebook.fresco:fresco:1.11.0'
 }
